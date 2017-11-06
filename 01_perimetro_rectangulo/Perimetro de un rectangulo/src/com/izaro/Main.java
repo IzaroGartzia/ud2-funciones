@@ -8,7 +8,7 @@ public class Main {
 
 
     public static int perimetroRectangulo(int base, int altura) {
-        int peri = base * altura;
+        int peri = (2*base) + (2*altura);
         return peri;
     }
 
