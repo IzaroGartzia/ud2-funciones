@@ -6,27 +6,41 @@ import java.io.InputStreamReader;
 
 public class Main {
 
-    public static int esPar(int n)
+    public static boolean esPar(int n)
     {
-     int resultado = n%2;
-        if(resultado == 0)
+        if (n%2 == 0) {
+            return true;
+        }
+        else
         {
-            System.out.println("El número "+n+" es par.");
+            return false;
         }
 
-     return resultado;
     }
 
-    public static int esImpar(int n)
+    /* Acortarlo a tope
+
+    return n% 2 == 0;
+
+    */
+
+    public static boolean esImpar(int n) {
+
+        if (n%2 != 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    /*
+    public static boolean esImpar(int n)
     {
-        int resultado = n%2;
-            if(resultado !=0)
-            {
-                System.out.println("El número "+n+" es impar.");
-            }
-        return resultado;
+        return !espar(n);
+     }
+     */
 
-    }
+
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -34,8 +48,13 @@ public class Main {
         System.out.println("Escribe un número y te diré si es par o impar: ");
         int n = Integer.parseInt(br.readLine());
 
-        int r1 = esPar(n);
-        int r2 = esImpar(n);
-
+        if(esPar(n))
+        {
+            System.out.println("El número "+n+" es par.");
+        }
+        else
+        {
+            System.out.println("El número "+n+" es impar.");
+        }
     }
 }
