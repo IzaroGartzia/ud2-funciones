@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 
 public class Main {
 
-
     public static double calcularCambio(double valor, String tipo)
     {
         double resultado = 0;
@@ -48,7 +47,8 @@ public class Main {
         return resultado;
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException
+    {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("Introduzca una cantidad en euros: ");
@@ -57,7 +57,11 @@ public class Main {
         System.out.println("Moneda a la que convertir (USD, GBP, CNY, JPY): ");
         String tipo = br.readLine();
 
-        double r = calcularCambio(valor,tipo);
+        calcularCambio(valor,tipo);
 
     }
+
+
+
+
 }
