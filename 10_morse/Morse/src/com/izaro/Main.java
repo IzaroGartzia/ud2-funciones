@@ -193,12 +193,31 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("Escribe algo y te lo mostraré en moooorse :)");
-        String texto = br.readLine().toLowerCase();
+        String texto = "";
 
-        for (int i = 0; i < texto.length(); i++) {
-            System.out.print(morse(texto.charAt(i)));
+        do {
+
+
+                System.out.println("Escribe algo y te lo mostraré en moooorse :)");
+                texto = br.readLine().toLowerCase();
+
+                if(!texto.equalsIgnoreCase("STOP"))
+                {
+                    for (int i = 0; i < texto.length(); i++) {
+                        System.out.print(morse(texto.charAt(i)));
+                    }
+
+                }
+
+
+
+        } while(!texto.equalsIgnoreCase("STOP"));
+
+
+        if(texto.equalsIgnoreCase("STOP"))
+        {
+            System.out.println("El programa ha terminado.");
+
         }
-
     }
 }
